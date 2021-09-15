@@ -1,7 +1,7 @@
-<div class="d-flex" id="wrapper">
+<div class="d-flex" id="menu">
   <!-- Sidebar -->
-  <div class="bg-white ps-4" id="sidebar-wrapper">
-    <div class="d-flex justify-content-center mt-3">
+  <div class="bg-white p-4">
+    <div class="d-flex justify-content-center">
       <img
         src="https://github.com/daviramosuc.png"
         class="img-fluid rounded-circle"
@@ -10,11 +10,11 @@
       />
     </div>
     <a [routerLink]="['']" class="text-decoration-none text-dark">
-      <h3 class="sidebar-heading text-center mt-3 mb-5 text-uppercase fw-bolder">
+      <h3 class="sidebar-heading text-center mt-3 mb-4 text-uppercase fw-bolder">
         Davi Lima
       </h3>
     </a>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled vertical-menu">
       <li class="mb-3">
         <a
           href=""
@@ -47,17 +47,20 @@
       <i class="fa fa-search me-2"></i>
       Search...
     </button>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between mb-4" id="social">
       <a href="" class="text-dark"><i class="fa fa-facebook fa-lg"></i></a>
       <a href="" class="text-dark"><i class="fa fa-twitter fa-lg"></i></a>
       <a href="" class="text-dark"><i class="fa fa-instagram fa-lg"></i></a>
       <a href="" class="text-dark"><i class="fa fa-linkedin fa-lg"></i></a>
     </div>
-    <div class="text-secondary mt-4">© 2021 Davi Ramos</div>
+    <small class="text-secondary">Todos os direitos reservados</small>
+    <div class="text-secondary">© 2021 Davi Ramos</div>
   </div>
   <!-- Page content wrapper -->
-
   <div id="page-content-wrapper">
     <!-- Top navigation-->
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>
