@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -6,4 +18,9 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
+}
+
+#page-content-wrapper {
+  min-width: 0;
+  width: 100%;
 }
