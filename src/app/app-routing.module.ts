@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SobreComponent } from './componentes/sobre/sobre.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'about'
+    redirectTo: 'sobre'
   },
   {
-    path: 'about',
-    loadChildren: () =>
-      import('./componentes/menu/menu.module').then((m) => m.MenuModule)
+    path: 'sobre',
+    component: SobreComponent
   }
 ];
 
