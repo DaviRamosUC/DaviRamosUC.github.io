@@ -1,6 +1,6 @@
-<div class="d-flex" id="menu">
+<div class="d-flex collapse" id="wrapper">
   <!-- Sidebar -->
-  <div class="bg-white p-4">
+  <div class="bg-white p-4" id="sidebar-wrapper">
     <div class="d-flex justify-content-center">
       <img
         src="https://github.com/daviramosuc.png"
@@ -10,7 +10,9 @@
       />
     </div>
     <a [routerLink]="['']" class="text-decoration-none text-dark">
-      <h3 class="sidebar-heading text-center mt-3 mb-4 text-uppercase fw-bolder">
+      <h3
+        class="sidebar-heading text-center mt-3 mb-4 text-uppercase fw-bolder"
+      >
         Davi Lima
       </h3>
     </a>
@@ -58,8 +60,26 @@
   </div>
   <!-- Page content wrapper -->
   <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="text-dark ps-3 fs-3" id="sidebarToggle"
+          ><i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
     <!-- Top navigation-->
-    <div class="container-fluid">
+    <div class="container-fluid" id="page-content-outlet">
       <router-outlet></router-outlet>
     </div>
   </div>
